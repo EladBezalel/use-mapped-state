@@ -2,7 +2,7 @@
   "author": "Elad Bezalel",
   "name": "use-mapped-state",
   "description": "A React hook for mapping state on each state change",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "module": "esm/index.js",
   "files": [
