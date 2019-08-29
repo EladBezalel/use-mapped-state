@@ -1,0 +1,71 @@
+{
+  "author": "Elad Bezalel",
+  "name": "use-mapped-state",
+  "description": "A React hook for mapping state on each state change",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "files": [
+    "lib/",
+    "esm/"
+  ],
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "tslint 'src/**/*.{ts,tsx}' -t verbose",
+    "lint:fix": "yarn lint --fix",
+    "lint:types": "tsc --noEmit",
+    "build:cjs": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es",
+    "clean": "rimraf lib esm"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:types && lint-staged",
+      "pre-push": "yarn lint && yarn clean && yarn build && yarn test"
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
+    "@testing-library/react-hooks": "^2.0.1",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "rimraf": "^3.0.0",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^4.0.0",
+    "typescript": "^3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EladBezalel/use-mapped-state"
+  },
+  "bugs": {
+    "url": "https://github.com/EladBezalel/use-mapped-state/issues"
+  },
+  "homepage": "https://github.com/EladBezalel/use-mapped-state#readme",
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "tslint --fix -t verbose",
+      "git add"
+    ]
+  }
+}
