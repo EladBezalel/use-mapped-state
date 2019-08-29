@@ -13,7 +13,7 @@ A React hook for mapping state on each state change
 <br />
 <br />
 <br />
-<img src="https://user-images.githubusercontent.com/6004537/63940447-25c10500-ca72-11e9-9564-9cbc6f82117c.png" />
+<img src="https://user-images.githubusercontent.com/6004537/63941774-f5c73100-ca74-11e9-8fc0-920ea734e7ca.png" />
 </div>
 
 ## Usage
